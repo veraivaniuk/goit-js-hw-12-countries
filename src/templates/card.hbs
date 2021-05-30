@@ -1,0 +1,15 @@
+    <h1 class ="nameOfCountry">{{ name }}</h1>
+    <div class="flaxBoxForCadr">
+        <ul >
+            <li><span class="headers">Capital:</span>{{ capital }}</li>
+            <li><span class="headers">Population:</span> {{ population }}</li>
+            <li><span class="headers">Languages:</span> 
+                <ul class="menu-list">
+                    {{#each languages}}
+                    <li class="menu-item">{{name}}</li>
+                    {{/each}}
+                </ul>
+            </li>
+        </ul>
+        <img src="{{ flag }}" alt="flag of {{ name }}">
+    </div>
