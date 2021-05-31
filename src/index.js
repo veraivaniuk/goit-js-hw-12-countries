@@ -22,7 +22,8 @@ refs.input.addEventListener('input', debounce((event)=>{
             refs.countryList.insertAdjacentHTML("afterbegin", markup);
         } else if( data.length > 1 && data.length <= 10){
             const markup = data.map((country)=>listTemplate(country))
-            refs.countryList.insertAdjacentHTML("afterbegin", markup);
+            console.log(markup);
+            refs.countryList.insertAdjacentHTML("afterbegin", markup.join(''));
             // render markup list with hendelbars 
             console.log("render markup list with hendelbars", data.length);
         } else if(data.length > 10){
